@@ -1,0 +1,18 @@
+section {
+    display: block;
+    margin-left:24em;
+    border: 1px;
+  }
+  form {
+    border: rgba(0,0,0,0.12) 3px solid;
+    border-radius: 5px;
+    position: relative;
+    padding-bottom: 1rem; 
+    padding-left: 4rem; 
+    margin-left: 10rem;    
+    margin-top: 1rem; 
+    margin-right: 10rem;  
+    align-content: center;
+    
+  }
+  

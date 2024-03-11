@@ -1,0 +1,54 @@
+<div class="demo-button-container">
+    <button mat-raised-button color="primary" routerLink="/employee/add" class="filter-btn">
+        Add Employee
+    </button>
+    <!-- <button mat-raised-button *ngIf="va=='admin'||'user'" (click)="logout()" class="demo-button">
+        logout
+    </button> -->
+</div>
+<div class="mat-elevation-z8">
+    <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput placeholder="filter" (keyup)="filterchange($event)">
+    </mat-form-field>
+    <table mat-table matSort [dataSource]="dataSource">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="emp_id">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let employees">e#{{  employees.emp_id  }} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="emp_name">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let employees"> {{employees.emp_name}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="email_id">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let employees"> {{employees.email_id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="designation">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Designation </th>
+            <td mat-cell *matCellDef="let employees"> {{employees.designation}} </td>
+        </ng-container>
+        <ng-container matColumnDef="department">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef> Department </th>
+            <td mat-cell *matCellDef="let employees"> {{employees.department}} </td>
+        </ng-container>
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Action </th>
+            <td mat-cell *matCellDef="let employees"> <button mat-raised-button color="primary"
+                    [routerLink]="['/employee/update', employees.emp_id]">Edit</button>&nbsp;&nbsp;<button mat-raised-button
+                    color="warn" (click)="deleteConfirmation(employees.emp_id)">Delete</button> </td>
+        </ng-container>
+
+       
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[3, 5, 10]" showFirstLastButtons></mat-paginator>
+</div>

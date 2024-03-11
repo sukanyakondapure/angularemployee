@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+    padding-left: 15rem;
+    padding-right: 20rem;
+    margin-right:40rem;
+    background-color: rgba(111, 239, 209, 0.687);
+  }
+table th{
+  background-color: rgba(23, 169, 169, 0.687);
+  font-weight:bold;
+  font-size: large;
+}
+  
+  .demo-button-container {
+    padding-bottom: 16px;
+    margin-left: 78%;
+    margin-top: 15px;
+  }
+  
+  .demo-button + .demo-button {
+    margin-left: 8px;
+   
+  }
+  .mat-elevation-z8{
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }

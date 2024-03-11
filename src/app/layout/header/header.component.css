@@ -1,0 +1,25 @@
+header {
+    background-color: #117c73;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 14vh;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+}
+.logo{
+   
+    display: flex;
+}
+.menu {
+    margin-left: 40rem;
+    margin-top: 0.7rem;    
+    display:flex;
+}
+
+img {    
+    display: inline-block;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+

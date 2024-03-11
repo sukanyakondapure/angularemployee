@@ -1,0 +1,68 @@
+<div class="wrapper">
+    <div class="container">
+        <h1>Welcome</h1>
+
+        <form id="login_form" class="form" [formGroup]="loginForm"  (ngSubmit)="login()">
+            <input type="text" formControlName="email"placeholder="Email">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                Email is required
+            </div>
+            <input type="password"  formControlName="password"  placeholder="Password">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                Password is required
+            </div>
+            <button type="submit" id="login-button">Login</button><br>
+            
+            <a href="/forgotpassword">Forgot Password</a>
+        </form>
+    </div>
+
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $("#login-button").click(function (event) {
+        event.preventDefault();
+
+        $('form').fadeOut(500);
+        $('.wrapper').addClass('form-success');
+    });
+</script>
+
+
+
+
+<!-- 
+    <main>
+        <form id="login_form" class="form_class" [formGroup]="loginForm"  (ngSubmit)="login()">
+            <div class="form_div">
+                <label>Email:</label>
+                
+                <input class="field_class" formControlName="email" type="text" placeholder="Enter email" autofocus>
+                <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                    Email is required
+                </div>
+                <label>Password:</label>
+                <input id="pass" class="field_class" formControlName="password" type="password" placeholder="Enter password">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                    Password is required
+                </div>
+                <button class="submit_class" type="submit" >Login</button>
+            </div>
+            <div class="info_div">
+                <p>New User? <a href="blank">Register!</a></p>
+            </div>
+        </form>
+    </main>
+     -->

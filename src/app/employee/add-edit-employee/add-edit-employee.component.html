@@ -1,0 +1,46 @@
+<form [formGroup]="employeeForm " form-field-wrapper ngClass="form-field-wrapper" (ngSubmit)="addoreditEmployee()">
+    <br />
+
+    <section>
+        <h1>Employee Form</h1>
+        <mat-form-field appearance="outline">
+            <mat-label>Name </mat-label>
+            <input matInput formControlName="emp_name" placeholder="Enter name"><br>
+            <div *ngIf="emp_name.invalid && (emp_name.dirty || emp_name.touched)">
+                Name is required
+            </div>
+            <br />
+        </mat-form-field><br>
+
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Email </mat-label>
+            <input matInput formControlName="email_id" placeholder="Enter email"><br>
+            <div *ngIf="email_id.invalid && (email_id.dirty || email_id.touched)">
+                Email Id is required
+            </div>
+            <br />
+        </mat-form-field><br>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>designation </mat-label>
+            <input matInput formControlName="designation" placeholder="Enter designation"><br>
+            <div *ngIf="designation.invalid && (designation.dirty || designation.touched)">
+                Designation is required
+            </div>
+            <br />
+        </mat-form-field><br>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Department </mat-label>
+            <input matInput formControlName="department" placeholder="Enter department"><br>
+            <div *ngIf="department.invalid && (department.dirty || department.touched)">
+                Department is required
+            </div>
+            <br />
+        </mat-form-field><br>
+        <div class="example-button-row">
+
+            <button mat-raised-button type="submit" [disabled]="employeeForm.invalid" color="primary">Submit</button>&nbsp;&nbsp;
+        
+            <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+        </div>
+    </section>
+</form>

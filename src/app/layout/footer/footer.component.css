@@ -1,0 +1,21 @@
+footer {
+    /* height: 10vh; */
+    background-color: #117c73;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -5px -5px 10px rgb(0,0,0,0.3);
+  
+    margin-top: auto;
+}
+footer > p {
+    text-align: center;
+    font-family: 'system-ui';
+    letter-spacing: 3px;
+}
+footer > p > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

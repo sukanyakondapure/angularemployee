@@ -1,0 +1,12 @@
+.example-card {
+    max-width: 400px;
+    margin-top: 30px;
+    margin-left: 25rem;
+    text-align: center;
+  }
+h1{
+    color: red;
+}
+button{
+  margin-left: 50px;
+}
